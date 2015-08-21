@@ -4,13 +4,13 @@ var Datastore = require('nedb'),
 
 // Initialize two nedb databases
 var photos = new Datastore({ filename: __dirname + '/data/photos', autoload: true }),
-	users = new Datastore({ filename: __dirname + '/data/users', autoload: true }),
+	users = new Datastore({ filename: __dirname + '/data/users', autoload: true });
 	phonenumber=new Datastore({filename:__dirname +'/data/phonenumber', autoload: true });
 
 // my uniques
 photos.ensureIndex({fieldName: 'name', unique: true});
 users.ensureIndex({fieldName: 'ip', unique: true});
-phonenumber.ensureIndex({fieldName:'phonenumber', unique:true});
+phonenumber.ensureIndex({fieldName:'phonenumber' unique:true});
 
 // my loader
 var photos_on_disk = fs.readdirSync(__dirname + '/public/photos');
