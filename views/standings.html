@@ -1,0 +1,33 @@
+<nav>
+	<a href="http://localhost:8080/./">Photos</a>
+	<a class="active" href="./standings">Standings</a>
+</nav>
+
+{{#if standings}}
+
+	<ul>
+
+		{{#each standings }}
+
+		<li>
+			<img src="photos/{{name}}" alt="Models thumbnail" />
+			<p class="up">{{this.likes}}</p>
+			<p class="down">{{this.dislikes}}</p>
+
+		</li>
+
+		{{/each}}
+
+	</ul>
+
+{{/if}}
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65700450-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

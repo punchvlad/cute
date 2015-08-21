@@ -1,0 +1,63 @@
+<nav>
+	<a class="active" href="./">Photos</a>
+	<a href="./standings">Standings</a> </br>
+
+</nav>
+
+{{#if number}}
+
+	<ul>
+
+		{{#each number }}
+
+		<li>
+		<p>{{phonenumber}} </p>
+
+		</li>
+
+		{{/each}}
+
+	</ul>
+
+{{/if}}
+
+{{#if photo}}
+
+	<img src="photos/{{photo.name}}"  alt="Model" />
+
+
+
+	<div class="button-holder">
+		<form action="./cute" method="post">
+			<input type="hidden" name="photo" value="{{photo.name}}" />
+			<input type="submit" value="Cute!" /><p class="up" style="	color:#90d184 ,	background-position: 17px -300px">{{photo.likes}}</p>
+		</form>
+		<form action="./notcute" method="post">
+			<input type="hidden" name="photo" value="{{photo.name}}" />
+			<input type="submit" value="Not Cute!" /><p class="down" style="	color:#90d184,	background-position: 17px -300px">{{photo.dislikes}}</p>
+		</form>
+
+	</div>
+
+{{else}}
+
+	<h3>No more photos to vote on! Check out the <a href="./standings">standings</a>.</h3>
+
+{{/if}}
+<div style="height=10px">
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65700450-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<div></div>
+<script type='text/javascript' src='//eclkmpbn.com/adServe/banners?tid=48015_74631_4&size=158x21'></script>
+<script type='text/javascript' src='//eclkmpbn.com/adServe/banners?tid=48015_74631_3'></script>
+<script type='text/javascript' src='//eclkmpbn.com/adServe/banners?tid=48015_74631_5&type=slider&animate=off&size=728x90'></script>
